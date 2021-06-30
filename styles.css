@@ -235,3 +235,62 @@ header {
 
 
 /* ************************************************************************/
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    html {
+        font-size: 62.5%;
+    }
+    .calculator {
+        width: 38rem;
+        height: 53.2rem;
+    }
+    .input-box {
+        height: 8.8rem;
+        margin-bottom: 2.4rem;
+        font-size: 2.3rem;
+    }
+    .operation {
+        width: 4.2rem;
+        height: 8.8rem;
+    }
+    .operand-box {
+        padding-top: 1rem;
+        font-size: 1rem;
+    }
+    .operator-box {
+        padding-top: 0.5rem;
+        font-size: 2.5rem;
+    }
+    .buttons-box {
+        height: 48rem;
+    }
+    .btn {
+        height: 6.4rem;
+    }
+    .btn-com {
+        font-size: 2.8rem;
+    }
+    .btn-del,
+    .btn-reset,
+    .btn-equality {
+        font-size: 1.8rem;
+    }
+    .btn-com,
+    .btn-del {
+        width: 6rem;
+    }
+    .btn-reset,
+    .btn-equality {
+        /* Using this formula to find the space available: 30rem = 4k + 3s, where k is the width of each common key and s is the distance between each of those keys */
+        /* Since k is 6rem, s must be 2rem.*/
+        /* Looking at the design, the width of each of the bottom keys equals the width of two common keys plus the space between them */
+        /* So the width of each bottom key can be represented by the following equation: 2k + s */
+        width: calc(6rem * 2 + 2rem);
+    }
+}
