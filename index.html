@@ -28,7 +28,7 @@
                 <div class="operator-box"></div>
             </div>
             <form>
-                <input type="text" class="input-box" />
+                <input type="text" class="input-box" readonly="true" />
             </form>
         </div>
 
@@ -36,38 +36,41 @@
             <!--Caja contenedora de todos los botones -->
             <div class="fila">
                 <!-- Fila con botones-->
-                <button class="btn btn-com">7</button>
-                <button class="btn btn-com">8</button>
-                <button class="btn btn-com">9</button>
-                <button class="btn btn-del">DEL</button>
+                <button class="btn btn-com" id="btn7" onclick="ingreso(7)">7</button>
+                <button class="btn btn-com" id="btn8" onclick="ingreso(8)">8</button>
+                <button class="btn btn-com" id="btn9" onclick="ingreso(9)">9</button>
+                <button class="btn btn-del" id="del" onclick="borrarDatos()">DEL</button>
             </div>
             <!-- Fin Fila con botones-->
             <div class="fila">
-                <button class="btn btn-com">4</button>
-                <button class="btn btn-com">5</button>
-                <button class="btn btn-com">6</button>
-                <button class="btn btn-com">+</button>
+                <button class="btn btn-com" onclick="ingreso(4)">4</button>
+                <button class="btn btn-com" onclick="ingreso(5)">5</button>
+                <button class="btn btn-com" onclick="ingreso(6)">6</button>
+                <button class="btn btn-com" onclick="operacion('+')">+</button>
             </div>
             <div class="fila">
-                <button class="btn btn-com">1</button>
-                <button class="btn btn-com">2</button>
-                <button class="btn btn-com">3</button>
-                <button class="btn btn-com">-</button>
+                <button class="btn btn-com" onclick="ingreso(1)">1</button>
+                <button class="btn btn-com" onclick="ingreso(2)">2</button>
+                <button class="btn btn-com" onclick="ingreso(3)">3</button>
+                <button class="btn btn-com" onclick="operacion('-')">-</button>
             </div>
             <div class="fila">
                 <button class="btn btn-com">.</button>
-                <button class="btn btn-com">0</button>
-                <button class="btn btn-com">/</button>
-                <button class="btn btn-com">x</button>
+                <button class="btn btn-com" onclick="ingreso(0)">0</button>
+                <button class="btn btn-com" onclick="operacion('/')">/</button>
+                <button class="btn btn-com" onclick="operacion('*')">x</button>
             </div>
             <div class="fila">
-                <button class="btn btn-reset">RESET</button>
-                <button class="btn btn-igual">=</button>
+                <button class="btn btn-reset" onclick="reset()">RESET</button>
+                <button class="btn btn-igual" onclick="resultado()">=</button>
             </div>
         </div>
         <!--Fin Caja contenedora de todos los botones -->
 
     </div>
+
+
+    <script src="./src/main.js "></script>
 </body>
 
 </html>
