@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #3a4663;
+}
+
+
+/* Caja contenedora de toda la calculadora */
+
+.calculator {
+    width: 72rem;
+    height: 85rem;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+
+/*************************************************************************/
+
+
+/*  Estilo a la cabezare del html */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-family: "Spartan", sans-serif;
+}
+
+
+/* ************************************************************************/
+
+.title {
+    padding-top: 1.5rem;
+    font-size: 3.2rem;
+    color: white;
+}
+
+
+/*************************************************************************/
+
+
+/* Estilos de caja input en donde saldra el resultado */
+
+.input {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-box {
+    /* Toma el 100% del ancho */
+    width: 100%;
+    height: 15.4rem;
+    background-color: #181f33;
+    /* margen inferior */
+    margin-bottom: 2.4rem;
+    color: white;
+    border: none;
+    font-family: "Spartan", sans-serif;
+    /* Aumente el grosor de la letra, tambien el tamaño de la caja*/
+    font-weight: 700;
+    /* Aumente el tamaño de la letra, tambien el tamaño de la caja */
+    font-size: 4.8rem;
+    /* Da margen interior, tambien aumente el tamaño de la caja */
+    padding: 0rem 5rem;
+    /*Se alinea el texto a la derecha, ya que se agregara una caja a la izquierda */
+    text-align: right;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.operation {
+    width: 10rem;
+    /* Se iguala al tamaño de inputo box, para completar toda la caja */
+    height: 15.4rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* Mismo color que input-box*/
+    background-color: #181f33;
+    border-radius: 0.8rem 0 0 1rem;
+    z-index: 1;
+}
+
+.operand-box {
+    padding: 2rem 0rem 1rem 1rem;
+    height: 30%;
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: "Spartan", sans-serif;
+    color: white;
+}
+
+.operator-box {
+    padding: 1rem 3rem 1rem 1rem;
+    height: 70%;
+    width: 100%;
+    font-size: 4.8rem;
+    font-family: "Spartan", sans-serif;
+    color: white;
+}
+
+
+/**************************************************************************/
+
+
+/*              ESTILO DE BOTONES                       */
+
+
+/* Caja de los botones */
+
+.caja-botones {
+    background-color: #242d44;
+    width: 100%;
+    height: 57.6rem;
+    padding: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Fila contenedora de grupo de botones */
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Definicion de la caja del boton */
+
+.btn {
+    /*Alto del boton*/
+    height: 7.7rem;
+    font-family: "Spartan", sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+/* Definicio del interiro del boton */
+
+.btn-com {
+    /*Mas tamaño al texto dentro del boton*/
+    font-size: 3.2rem;
+    color: black;
+    background-color: #eae3dc;
+    /*Sombra bajo el boton*/
+    box-shadow: 0rem 0.5rem;
+}
+
+
+/*Con esto le damos altura a los botones */
+
+.btn-com,
+.btn-del {
+    width: 13.5rem;
+}
+
+
+/* Con esto le damos ancho a los botones*/
+
+.btn-reset,
+.btn.btn-igual {
+    width: calc(13.5rem * 2 + 10rem /3);
+}
+
+
+/* Tamaño de letra de los botones ademas del color de fondo*/
+
+.btn-del,
+.btn-reset,
+.btn-igual {
+    font-size: 2rem;
+    color: white;
+}
+
+
+/* Cambiar el color de fondo de los botones igual, del y reset, ademas de dar sombra */
+
+.btn-igual {
+    background-color: #d03f2f;
+    box-shadow: 0rem 0.5rem #93261a;
+}
+
+.btn-del,
+.btn-reset {
+    background-color: #647198;
+    box-shadow: 0rem 0.4rem #414e73;
+}
+
+
+/*Al presionar el boton se hace el efecto de movimiento hacia abajo y en algunpos casos cambia el fondo */
+
+.btn:active {
+    transform: translateY(0.3rem);
+}
+
+.btn-com:active {
+    box-shadow: 0rem 0.3rem #b3a497;
+    background-color: #fffffe;
+}
+
+.btn-del:active {
+    background-color: #d03f2f;
+    box-shadow: 0rem 0.3rem #93261a;
+}
+
+.btn-del:active,
+.btn-reset:active {
+    background-color: #a2b2e1;
+    box-shadow: 0rem 0.3rem #414e73;
+}
+
+.btn-igual:active {
+    background-color: #f96b5b;
+    box-shadow: 0rem 0.3rem #93261a;
+}
+
+
+/*************************************************************************/
+
+
+/* ************************************************************************/
