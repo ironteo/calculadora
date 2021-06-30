@@ -66,3 +66,7 @@ function multiplicacion(num1, num2) {
 function division(num1, num2) {
     cajaDatos.value = num1 / num2;
 }
+
+let resultado = () => {
+    alert('dsfsdfsdf')
+}
